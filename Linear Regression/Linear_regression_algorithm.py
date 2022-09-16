@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 salary_data= pd.read_csv('Linear Regression\salary_data.csv')
-
+print(salary_data)
 yearsExperience= salary_data.YearsExperience
 salary = salary_data.Salary
 #Loss functions are important because it tell's us how off we are from the actual result.
@@ -37,7 +37,7 @@ def gradient_descent(m_now, b_now, points, L):
 m=0
 b=0
 L=0.001
-epochs = 100
+epochs = 100000
 
 for i in range(epochs):
     m,b = gradient_descent(m,b,salary_data, L)
